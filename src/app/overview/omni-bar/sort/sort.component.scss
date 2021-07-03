@@ -1,0 +1,10 @@
+.sort{
+  display: flex;
+  flex-flow: row wrap;
+  .button{
+    display: inline-block;
+    font-size: 16px;
+    height: 45px;
+    margin: 4px 2px;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="search">
+  <options-filter [label]="'Filter By'"
+                  [(selectedSort)]="selectedFilter"
+                  [sortingKeys]="filteringPatientKeys"
+                  [SortingTypes]="FilteringFieldType"
+  >
+  </options-filter>
+  <input class="search-bar" matInput type="text" name="age-filter"
+         [(ngModel)]="filterString"
+         placeholder="Enter filter text">
+  <button mat-mini-fab color="warn"
+          (click)="filter(selectedFilter)" aria-label="Example icon button with a filter list icon">
+    <mat-icon>filter_list</mat-icon>
+  </button>
+  <button mat-mini-fab color="primary"
+          (click)="clearFilter()"aria-label="Example icon button with a delete icon">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>

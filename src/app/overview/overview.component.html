@@ -1,0 +1,15 @@
+<div class="overview">
+  <omni-bar></omni-bar>
+  <div class="patients-list">
+    <patient-card class="card"
+                  *ngFor="let patient of patientsServiceService.patients |
+                   paginate:{itemsPerPage: patientsServiceService.patientsPerPage,
+                   currentPage: patientsServiceService.page,
+                   totalItems: patientsServiceService.totalPatientsAmount}"
+                  [patient]="patient"></patient-card>
+  </div>
+  <pagination-controls (pageChange)= "pageChange( $event)">
+  </pagination-controls>
+</div>
+
+

@@ -1,0 +1,13 @@
+.overview{
+  width: 93%;
+}
+.patients-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 760px;
+}
+.card {
+  flex: 0 1 calc(33.3% - 32px);
+}
