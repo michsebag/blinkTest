@@ -1,13 +1,23 @@
 .overview{
-  width: 93%;
+  .omni-bar{
+    height: 70px;
+    display: block;
+  }
+  .patients-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    .card {
+      width: 30%;
+      margin: 10px;
+    }
+  }
+  .page-controller{
+    height: 70px;
+    display: block;
+  }
 }
-.patients-list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 760px;
-}
-.card {
-  flex: 0 1 calc(33.3% - 32px);
-}
+
+

@@ -1,0 +1,19 @@
+.patient-card{
+  border: 1px solid black;
+  min-height: 306px;
+  .reply-time {
+    display: flex;
+    flex-direction: row;
+    .time{
+      margin-right: 5px;
+    }
+    .good-reply-time {
+      color: limegreen;
+    }
+
+    .bad-reply-time {
+      color: red;
+    }
+  }
+}
+

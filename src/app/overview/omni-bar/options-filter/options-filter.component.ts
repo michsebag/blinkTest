@@ -8,10 +8,10 @@ import {MatSelectChange} from '@angular/material/select';
 })
 export class OptionsFilterComponent implements OnInit {
   @Input() label: string;
-  @Input() selectedSort: any;
-  @Output() selectedSortChange = new EventEmitter<any>();
-  @Input() sortingKeys: any;
-  @Input() SortingTypes: any;
+  @Input() selected: any;
+  @Output() selectedChange = new EventEmitter<any>();
+  @Input() keys: any;
+  @Input() Types: any;
 
   constructor() {
   }
@@ -20,8 +20,6 @@ export class OptionsFilterComponent implements OnInit {
   }
 
   onSelectionChange(event: MatSelectChange) {
-    console.log('event: ', event);
-    console.log('this.selectedSort: ', this.selectedSort);
-    this.selectedSortChange.emit((this.selectedSort));
+    this.selectedChange.emit((this.selected));
   }
 }

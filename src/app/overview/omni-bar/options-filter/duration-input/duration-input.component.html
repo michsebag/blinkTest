@@ -1,0 +1,36 @@
+<div class="input-wrapper"
+     (click)="onClickTextBoxOutSideCell()"
+     (focusin)="onFocus()"
+     (keydown.enter)="$event.target.blur();">
+    <input class="duration-input"
+           #hoursInput
+           placeholder="HH"
+           autocomplete="off"
+           type="text"
+           (ngModelChange)="validateDuration($event)"
+           [(ngModel)]="hoursString"
+           (focusin)="onHoursFocusIn()"
+           (focusout)="onHoursFocusOut($event)"
+           (click)="onClick($event, 'hours')"
+    >:
+    <input class="duration-input"
+           #minutesInput
+           autocomplete="off"
+           placeholder="MM"
+           type="text"
+           [(ngModel)]="minutesString"
+           (focusin)="onMinutesFocusIn()"
+           (focusout)="onMinutesFocusOut($event)"
+           (click)="onClick($event, 'minutes')"
+    >:
+    <input #secondsInput
+           class="duration-input"
+           autocomplete="off"
+           placeholder="SS"
+           type="text"
+           [(ngModel)]="secondsString"
+           (focusin)="onSecondsFocusIn()"
+           (focusout)="onSecondsFocusOut($event)"
+           (click)="onClick($event, 'seconds')"
+    >
+</div>

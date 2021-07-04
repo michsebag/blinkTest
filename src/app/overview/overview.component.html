@@ -1,5 +1,5 @@
 <div class="overview">
-  <omni-bar></omni-bar>
+  <omni-bar class="omni-bar"></omni-bar>
   <div class="patients-list">
     <patient-card class="card"
                   *ngFor="let patient of patientsServiceService.patients |
@@ -8,8 +8,10 @@
                    totalItems: patientsServiceService.totalPatientsAmount}"
                   [patient]="patient"></patient-card>
   </div>
-  <pagination-controls (pageChange)= "pageChange( $event)">
-  </pagination-controls>
+  <div class="page-controller">
+    <pagination-controls (pageChange)= "pageChange( $event)">
+    </pagination-controls>
+  </div>
 </div>
 
 

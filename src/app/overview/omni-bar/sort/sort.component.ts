@@ -1,7 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {sortingFieldTypes} from "../../shared/enum/sortingFieldTypes";
-import {PatientsService} from "../../../services/patients.service";
-import {filteringFieldTypes} from "../../shared/enum/filteringFieldTypes";
+import {Component, EventEmitter, Output} from '@angular/core';
+import {sortingFieldTypes} from '../../shared/enum/sortingFieldTypes';
+import {PatientsService} from '../../../services/patients.service';
 
 @Component({
   selector: 'sort',
@@ -20,7 +19,6 @@ export class SortComponent{
     this.sortingPatientKeys = Object.keys(sortingFieldTypes);
   }
   sort(category: sortingFieldTypes) {
-    console.log('category: ', category);
     this.resetDataManipulation.emit();
     if (this.prevSortField !== category) {
       this.prevSortField = category;
@@ -31,7 +29,7 @@ export class SortComponent{
     }
     const newSort = this.isAsc ? 'asc' : 'desc';
     this.patientsService.Order = `&_order=${newSort}`;
-    this.patientsService.updatePatients();
+    this.patientsService.getPatients();
   }
 
   clearSort() {
@@ -39,7 +37,7 @@ export class SortComponent{
     this.prevSortField = undefined;
     this.patientsService.Sort = '';
     this.patientsService.Order = '';
-    this.patientsService.updatePatients();
+    this.patientsService.getPatients();
   }
   SortingFieldTypes(key: any) {
     return sortingFieldTypes[key];

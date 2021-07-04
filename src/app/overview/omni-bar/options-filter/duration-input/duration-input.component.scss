@@ -1,0 +1,31 @@
+$search-field-border-clr: #D0D2D3;
+$placeholder-text-clr-normal: rgba(0, 0, 0, 0.3);
+
+.input-wrapper{
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid $search-field-border-clr;
+  height: 47px;
+  width: 200px;
+  font-size: 16px;
+  margin: 4px 2px;
+  .duration-input{
+    width: 35px;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    outline: none;
+    text-align: center;
+    padding: 0px 6px 0px 6px;
+  }
+}
+input::placeholder{
+  color: $placeholder-text-clr-normal;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}

@@ -1,8 +1,9 @@
 <mat-form-field appearance="fill">
   <mat-label>{{label}}</mat-label>
-  <mat-select [(value)]="selectedSort" (selectionChange)="onSelectionChange($event)">
-    <mat-option *ngFor="let key of sortingKeys " [value]="key">
-      {{SortingTypes(key)}}
+  <mat-select [(value)]="selected" (selectionChange)="onSelectionChange($event)">
+    <mat-option *ngFor="let key of keys " [value]="key">
+      {{Types(key)}}
     </mat-option>
   </mat-select>
 </mat-form-field>
+
